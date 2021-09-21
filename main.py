@@ -11,11 +11,11 @@ def select_the_winner(auction):
     winner = ""
     winers_bid = 0
     no_same_bids = True
-    for key in auction:
-            if auction[key] > winers_bid:
-                winers_bid = auction[key]
-                winner = key
-            elif auction[key] == winers_bid:
+    for bidder in auction:
+            if auction[bidder] > winers_bid:
+                winers_bid = auction[bidder]
+                winner = bidder
+            elif auction[bidder] == winers_bid:
                 no_same_bids = False
     if no_same_bids:
         print(f"The winner is {winner} with a bid of ${winers_bid}")
